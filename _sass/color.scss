@@ -1,0 +1,43 @@
+$fg-light: rgb(230, 230, 230);
+$fg-dark: rgb(95, 107, 103);
+
+body {
+  color: $fg-dark;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.8);
+
+  a {
+    color: $fg-light;
+  }
+  
+  label {
+    color: #ddd;
+  }
+  
+  #menu:checked + label {
+    border-bottom: 1px solid $fg-light;
+  }
+
+}
+
+article {
+  a {
+    color: $fg-dark;
+  }
+}
+
+footer {
+  background: $fg-dark;
+  color: $fg-light;
+}
+
+#hero{
+  background: linear-gradient(rgba(0, 0, 0, 0.4),
+                              rgba(0, 0, 0, 0.2)),
+              url("/assets/newyork.jpg");
+  background-size: cover;
+
+  color: $fg-light;
+}

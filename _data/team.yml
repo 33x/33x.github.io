@@ -1,0 +1,31 @@
+- name: Joshua M. Joseph, Ph.D.
+  title: Principal
+  photo: josh.jpg
+  bio: |
+    Joshua Joseph has a decade of experience solving real-world
+    problems using the tools of machine learning. He received a
+    B.S. in Applied Mathematics and a B.S. in Mechanical Engineering
+    from Rochester Institute of Technology and a S.M and Ph.D. from
+    Massachusetts Institute of Technology. At MIT, his Ph.D. work
+    focused on methods for learning models of complex systems from
+    limited data for decision making. He worked on a variety of
+    real-world projects, such as modeling battery health degradation,
+    predicting taxi routes, and autonomous robot interaction with
+    turbulent water flow. Following his Ph.D., Josh co-founded
+    Causality Technologies, a proprietary trading company, focusing on
+    fully automated trading and ML-based strategy discovery.
+
+- name: Marek W. Doniec, Ph.D.
+  title: Principal
+  photo: marek.jpg
+  bio: |
+    Marek Doniec has 10+ years of experience developing autonomous
+    robotic systems for ground-, air-, and underwater applications and
+    has lead multiple efforts in this space. Marek holds a Ph.D. in
+    Computer Science and Electrical Engineering from MIT, a M.S. in
+    Computer Science from Yale University and a Vordiplom (B.S.) in
+    Computer Science from the University of Karlsruhe. He has been an
+    active member of research labs in the United States, Germany,
+    France, and Singapore. Additionally, he has experience in
+    industry, having worked at Rethink Robotics and Google [x], as
+    well as a stint as a quantitative researcher on Wall St.

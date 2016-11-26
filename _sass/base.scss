@@ -1,0 +1,31 @@
+// border-box everywhere
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// breakpoints for media queries (min-width)
+
+$on-tablet: 425px;
+$on-laptop: 768px;
+
+
+// helpers
+
+@mixin media-query($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

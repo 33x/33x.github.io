@@ -1,0 +1,80 @@
+nav {
+  display: flex;
+  flex-flow: column;
+
+  width: 100%;
+
+  position: fixed;
+
+  a {
+    display: none;
+    padding: 0.3rem;
+  }
+
+  label {
+    margin: 0.3rem;
+    padding: 0.3rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #menu:checked ~ a {
+    display: block;
+  }
+
+  @include media-query($on-tablet) {
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+
+    #menu {
+      display: none;
+    }
+
+    label {
+      display: none;
+    }
+
+    a  {
+      display: block;
+    }
+
+    a.home {
+      margin-right: auto;
+    }
+  }
+}
+
+article {
+  width: 100%;
+  padding: 2rem;
+
+  div.container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  section {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+footer {
+  height: 20vh;
+  text-align: center;
+  padding: 1rem;
+}
+
+p.address {
+  white-space: pre;
+}
+
+#hero {
+  min-height: 60vh;
+  margin: 0;
+  padding: 2rem;
+}

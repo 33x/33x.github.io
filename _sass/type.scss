@@ -1,0 +1,25 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  a {
+    text-decoration: none;
+  }
+
+  label {
+    text-align: right;
+    cursor: pointer;
+    user-select: none;
+    
+  }
+}
+
+article {
+  text-align: left;
+}
+
+#hero {
+  text-align: left;
+}
