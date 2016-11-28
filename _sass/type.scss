@@ -17,7 +17,6 @@ a {
 
 nav {
   a {
-    font-family: 'Merriweather', serif;
     text-decoration: none;
     font-size: 1.2em;
   }
@@ -56,6 +55,14 @@ article {
 
   em {
     font-weight: normal;
+  }
+
+  @include media-query($on-tablet) {
+    font-size: 1.2rem;
+  }
+
+  @include media-query($on-laptop) {
+    font-size: 1.5rem;
   }
 
 }
