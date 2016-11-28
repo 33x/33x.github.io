@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background: rgba(0, 0, 0, 0.8);
+  background: $fg-dark; 
 
   a {
     color: $fg-light;
@@ -34,10 +34,10 @@ footer {
 }
 
 #hero{
-  background: linear-gradient(rgba(0, 0, 0, 0.4),
-                              rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(rgba(255, 255, 255, 0.95),
+                              rgba(255, 255, 255, 0.9)),
               url("/assets/newyork.jpg");
   background-size: cover;
 
-  color: $fg-light;
+  color: $fg-dark;
 }

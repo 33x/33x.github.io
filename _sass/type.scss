@@ -1,3 +1,15 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+}
+
+p {
+  line-height: 1.5em;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -5,15 +17,18 @@ a {
 
 nav {
   a {
+    font-family: 'Merriweather', serif;
     text-decoration: none;
+    font-size: 1.2em;
   }
 
   label {
+    font-size: 1.5em;
     text-align: right;
     cursor: pointer;
     user-select: none;
-    
   }
+  
 }
 
 article {
@@ -22,4 +37,33 @@ article {
 
 #hero {
   text-align: left;
+
+  h1 {
+    font-size: 3.5em;
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  em {
+    font-weight: normal;
+  }
+
+}
+
+#contact {
+  .email {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
