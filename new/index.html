@@ -36,7 +36,7 @@ layout: default
   <h1>Team</h1>
   {% for member in site.data.team %}
     <section>
-      <img src="/assets/{{member.photo}}"/>
+      <img src="{{ site.baseurl }}/assets/{{ member.photo }}"/>
       <h2> {{ member.name }} </h1>
       <h3> {{ member.title }} </h2>
       {{  member.bio | markdownify }}
