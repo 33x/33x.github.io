@@ -14,5 +14,3 @@ google_analytics: UA-7870337-1
 # Build settings
 exclude: ["Gemfile*", "Makefile", ".*"]
 markdown: kramdown
-sass:
-  style: compressed

@@ -1,3 +1,13 @@
 <footer>
-  <h1>Footer</h1>
+  <article id="contact">
+    <section class="online">
+      <h3>© 2016 33x, LLC.</h3>
+      <p><a class="email" href="mailto:info@33x.ai">info@33x.ai</a></p>
+    </section>
+    <section class="location">
+      {% for location in site.data.locations %}
+      <p class="address">{{ location.address }}</p>
+      {% endfor %}
+    </section>
+  </article>
 </footer>

@@ -1,38 +1,53 @@
-$fg-light: rgb(230, 230, 230);
-$fg-dark: rgb(95, 107, 103);
+
+
+$base-dark: #444; 
+$base-light: #EEE;
 
 body {
-  color: $fg-dark;
+  color: $base-dark;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 nav {
-  background: $fg-dark; 
-
   a {
-    color: $fg-light;
+    color: $base-light;
   }
   
   label {
-    color: #ddd;
+    color: $base-light;
   }
   
   #menu:checked + label {
-    border-bottom: 1px solid $fg-light;
+    border-bottom: 1px solid $base-light;
   }
 
 }
 
 article {
   a {
-    color: $fg-dark;
+    color: $base-dark;
   }
 }
 
 footer {
-  background: $fg-dark;
-  color: $fg-light;
+  background: black;
+  color: $base-light;
+  a {
+    color: $base-light;
+    &:hover {
+      color: red;
+    }
+  }
 }
 
-#hero{
-  color: $fg-dark;
+#intro{
+  color: $base-light;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+              url("/assets/newyork.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

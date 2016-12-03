@@ -1,25 +1,59 @@
+
+@import "vendor/normalize";
+
+
 // border-box everywhere
 
-html {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+
+// reset all block elements
+
+address, article, aside, blockquote, canvas, dd, div, dl, fieldset,
+figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header,
+hgroup, hr, html, li, main, nav, noscript, ol, output, p, pre,
+section, table, tfoot, ul, video {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
 }
+
+html, body { height: 100%; }
+a img { border: none; }
+blockquote { quotes: none; }
+blockquote:before, blockquote:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+img {
+  display: block;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 
 // breakpoints for media queries (min-width)
 
-$on-tablet: 425px;
-$on-laptop: 768px;
+$breakpoints: (
+  small: 320px,
+  medium: 425px,
+  large:  768px,
+  x-large: 992 px
+);
 
 
 // helpers
 
-@mixin media-query($width) {
-    @media screen and (min-width: $width) {
-        @content;
-    }
+@mixin media($breakpoint) {
+  @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
+    @content;
+  }
 }
 
 %clearfix {
@@ -28,4 +62,40 @@ $on-laptop: 768px;
     display: table;
     clear: both;
   }
+}
+
+
+// typographical vertical rhythm
+
+$base-line-height: 1.5 !default;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: $base-line-height;
+}
+
+@function unit($scale: 1) {
+  @return $scale * $base-line-height * 1rem;
+}
+
+@mixin size($scale: 1) {
+  $font-size: $scale * 1rem;
+  $lines: ceil($scale / $base-line-height);
+  
+  font-size: $font-size;
+  line-height: $lines * unit(); 
+}
+
+@mixin heading($scale: 1, $margin-bottom: 1) {
+  @include size($scale);
+  margin-bottom: $margin-bottom * unit();
+}
+
+@mixin base($margin-bottom: 1) {
+  @include size();
+  margin-bottom: $margin-bottom * unit();
 }

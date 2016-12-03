@@ -2,55 +2,37 @@
 # -*- engine:liquid -*-
 layout: default
 ---
-<article id="hero">
-  <h1>33x</h1>
-  <h2>We are an intelligent systems consultancy.</h2>
-  <p>Our expertise is in artificial intelligence, machine learning,
-  data science and robotics.</p>
+
+<article id="intro">
+  <section>
+    <h1><span class="name">33x</span> specializes in machine learning and robotics consulting.</h1>
+    <h2>We help companies develop systematic and sustainable solutions
+      for their data, machine learning, automation and robotics needs.</h2>
+  </section>
 </article>
 
 <article id="about">
   <h1>About</h1>
-  <p>With offer custom expert solutions to difficult problems. Our
+  <p>We offer custom expert solutions to difficult problems. Our
     team has more than two decades of academic and industrial
     experience developing state-of-the-art systems in a variety of fields.
   </p>
   {% for area in site.data.areas %}
-    <section>
-      <h2> {{ area.title }} </h1>
+    <section class="area">
+      <h2> {{ area.title }} </h2>
       <p> {{ area.content }} </p>
     </section>
   {%  endfor %}
 </article>
 
-<article id="work">
-  <h1>Work</h1>
-  <p> Nullam eu ante vel est convallis dignissim.  Fusce suscipit,
-    wisi nec facilisis facilisis, est dui fermentum leo, quis tempor
-    ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum
-    turpis sed pede.  Sed bibendum.
-  </p>
-</article>
-
 <article id="team">
   <h1>Team</h1>
   {% for member in site.data.team %}
-    <section>
+    <section class="person">
       <img src="{{ site.baseurl }}/assets/{{ member.photo }}"/>
-      <h2> {{ member.name }} </h1>
-      <h3> {{ member.title }} </h2>
+      <h2> {{ member.name }} </h2>
+      <h3> {{ member.title }} </h3>
       {{  member.bio | markdownify }}
-    </section>
-  {% endfor %}
-</article>
-
-<article id="contact">
-  <h1>Contact </h1>
-  <h2 class="email"><a href="mailto:info@33x.ai">info@33x.ai</a></h2>
-  {% for location in site.data.locations %}
-    <section>
-      <h2>{{ location.name }}</h1>
-      <p class="address">{{ location.address }}</p>
     </section>
   {% endfor %}
 </article>
