@@ -126,6 +126,14 @@ article .container {
   }
 }
 
+main article::before {
+  // fix viewport positioning offset due fixed nav menu
+  content: "";
+  display: block;
+  height: unit();
+  margin-top: -1 * unit();
+}
+
 #intro {
   min-width: 100%;
   min-height: 100vh;
