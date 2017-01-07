@@ -4,14 +4,17 @@ layout: default
 ---
 
 <article id="intro">
+  <div class="container">
   <section>
     <h1><span class="name">33x</span> specializes in machine learning and robotics consulting.</h1>
     <h2>We help companies develop systematic and sustainable solutions
       for their data, machine learning, automation and robotics needs.</h2>
   </section>
+  </div>
 </article>
 
 <article id="about">
+  <div class="container">
   <h1>About</h1>
   <p>We offer custom expert solutions to difficult problems. Our
     team has more than two decades of academic and industrial
@@ -23,9 +26,11 @@ layout: default
       <p> {{ area.content }} </p>
     </section>
   {%  endfor %}
+  </div>
 </article>
 
 <article id="team">
+  <div class="container">
   <h1>Team</h1>
   {% for member in site.data.team %}
     <section class="person">
@@ -35,4 +40,5 @@ layout: default
       {{  member.bio | markdownify }}
     </section>
   {% endfor %}
+  </div>
 </article>

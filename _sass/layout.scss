@@ -5,9 +5,10 @@ body {
 body {
   display: flex;
   flex-direction: column;
+}
 
-  // children of header, main, footer  
-  > * > * {
+@mixin page-center-children() {
+  > * {
     width: 100%;
     max-width: $max-width;
     margin: auto;
@@ -17,13 +18,19 @@ body {
 header {
   width: 100%;
   position: fixed;
+  z-index: 2;
+  @include page-center-children();
 }
 
 main {
   /* padding-top: 2 * unit(); */
+  article {
+    @include page-center-children();
+  }
 }
 
 footer {
+  @include page-center-children();
 }
 
 nav {
@@ -75,7 +82,7 @@ nav {
   }
 }
 
-article {
+article .container {
   padding-top: 2*unit();
   padding-bottom: 2*unit();
 
@@ -123,7 +130,9 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
 
+#intro .container {
   section {
     margin: auto;
     text-align: center;
@@ -134,11 +143,10 @@ article {
   }
 }
 
-#about {
+#about .container {
   justify-content: flex-start;  
 
   @include media(large) {
-    justify-content: flex-start;
     >h1, >p {
       max-width: 100% * (10/12);
       margin-left: auto;
@@ -147,7 +155,7 @@ article {
   }
 }
 
-#team {
+#team .container {
   section {
     img {
       border-radius: 50%;
@@ -168,7 +176,7 @@ article {
   
 }
 
-#contact {
+#contact .container {
   width: 100%;
   margin-bottom: 0;
   padding-top: 2*unit();

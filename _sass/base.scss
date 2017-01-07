@@ -44,7 +44,7 @@ $breakpoints: (
   small: 320px,
   medium: 425px,
   large:  768px,
-  x-large: 992 px
+  x-large: 992px
 );
 
 
@@ -87,7 +87,7 @@ body {
   $lines: ceil($scale / $base-line-height);
   
   font-size: $font-size;
-  line-height: $lines * unit(); 
+  line-height: $lines * unit();
 }
 
 @mixin heading($scale: 1, $margin-bottom: 1) {
