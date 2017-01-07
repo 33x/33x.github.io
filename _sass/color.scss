@@ -1,17 +1,19 @@
-
-
 $base-dark: #444; 
-$base-light: #EEE;
+$base-light: #eee;
 
 body {
   color: $base-dark;
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(50, 50, 50, 0.75);
 }
 
 nav {
+  a:first-of-type {
+    color: gold;
+  }
+
   a {
     color: $base-light;
   }
@@ -33,7 +35,7 @@ article {
 }
 
 footer {
-  background: black;
+  background: $base-dark;
   color: $base-light;
   a {
     color: $base-light;
@@ -45,14 +47,18 @@ footer {
 
 article {
   h1 {
-    color: grey;
+    color: darken($base-light, 10%);
   }
 }
 
 #intro {
   h1, h2 {
     color: $base-light;
-  } 
+  }
+
+  .name {
+    color: gold; 
+  }
 
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
               url("/assets/newyork.jpg");
