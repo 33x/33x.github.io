@@ -83,10 +83,9 @@ nav {
 }
 
 article .container {
-  padding-top: 2*unit();
-  padding-bottom: 2*unit();
+  padding-top: 1.5 * unit();
 
-  text-align: center;
+  text-align: left;
   
   display: flex;
   flex-flow: column;
@@ -94,20 +93,24 @@ article .container {
   > * {
     padding: 0 unit(0.5);
   }
-
+  
   > h1, > p {
     width: 100%;
   }
   
   section {
     img {
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
       width: 100%;
-      padding: unit();
     }
   }
-  
+
   @include media(medium) {
+    padding-bottom: 2 * unit();
+  }
+  
+  @include media(large) {
     flex-flow: row wrap;
     justify-content: space-around;
     
@@ -116,7 +119,7 @@ article .container {
     }
   }
   
-  @include media(large) {
+  @include media(x-large) {
     section {
       width: calc(100% / 3);
     }
@@ -145,21 +148,14 @@ article .container {
 
 #about .container {
   justify-content: flex-start;  
-
-  @include media(large) {
-    >h1, >p {
-      max-width: 100% * (10/12);
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
 }
 
 #team .container {
   section {
     img {
       border-radius: 50%;
-      max-width: 12 * unit();
+      max-width: 8 * unit();
+      margin-bottom: unit();
     }
   }
   @include media(medium) {
@@ -170,7 +166,7 @@ article .container {
   }
   @include media(large) {
     section {
-      width: 100% * 5 /12;
+      width: 100% * (5/12);
     }
   }
   
@@ -186,14 +182,11 @@ article .container {
     white-space: pre;
   }
 
-  @include media(medium) {
+  @include media(large) {
     justify-content: space-around;
     section {
-      text-align: right;
-      width: 100% * (4/12);
-      &.online {
-        text-align: left;
-      }
+      text-align: left;
+      width: 100% * (5/12);
     }
   }
 }
