@@ -5,9 +5,10 @@ url: "http://33x.ai" # the base hostname & protocol for your site
 
 title: 33x.ai
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  33x specializes in machine learning and robotics consulting.
+
+  We help companies develop systematic and sustainable solutions for
+  their data, machine learning, automation and robotics needs.
 
 google_analytics: UA-7870337-1
 
