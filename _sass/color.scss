@@ -1,27 +1,28 @@
 $base-dark: #444; 
 $base-light: #eee;
+$brand-color-01: gold;
 
 body {
   color: $base-dark;
 }
 
 header {
-  background-color: rgba(50, 50, 50, 0.75);
+  background-color: rgba(50, 50, 50, 0.9);
 }
 
 nav {
   a:first-of-type {
-    color: gold;
+    color: $brand-color-01;
   }
 
   a {
-    color: $base-light;
+    color: darken($base-light, 30%);
   }
   
   label {
-    color: $base-light;
+    color: rgba($brand-color-01, 1);
   }
-  
+
   #menu:checked + label {
     border-bottom: 1px solid $base-light;
   }
@@ -57,7 +58,7 @@ article {
   }
 
   .name {
-    color: gold; 
+    color: $brand-color-01; 
   }
 
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),

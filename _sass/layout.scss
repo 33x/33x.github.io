@@ -97,6 +97,10 @@ article .container {
   > h1, > p {
     width: 100%;
   }
+
+  h1 {
+    margin-bottom: 0.5 * unit();
+  }
   
   section {
     img {
