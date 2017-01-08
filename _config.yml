@@ -10,7 +10,7 @@ description: >
   We help companies develop systematic and sustainable solutions for
   their data, machine learning, automation and robotics needs.
 
-google_analytics: UA-7870337-1
+google_analytics: UA-89983588-1
 
 # Build settings
 exclude: ["Gemfile*", "Makefile", ".*"]
